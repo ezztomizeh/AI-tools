@@ -47,7 +47,7 @@ def AutoSVC(dataPath,label):
           break
         pastAcc = best
         pastC = C
-    model = SVC(kernal=kernals[np.argmax(bestAcc)],C=kernals[np.argmax(bestC)])
+    model = SVC(kernal=kernels[np.argmax(bestAcc)],C=bestC[np.argmax(bestAcc)])
     return model
   else:
     return None
